@@ -21,6 +21,10 @@ namespace ServerNew
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseIISIntegration();
+                    webBuilder.UseUrls("http://localhost:5500/");
+
+
                 });
     }
 }
